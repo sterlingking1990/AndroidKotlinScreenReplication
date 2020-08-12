@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskFour</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="jumbotron">Welcome to app</string>
+    <string name="subheading">3,666 businesses signed up last week. Try Acme for 30 days.</string>
+    <string name="phone_image">This is a phone image</string>
+    <string name="go_back">This is a back button</string>
+</resources>

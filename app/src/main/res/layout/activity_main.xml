@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <!--Draw table for first section -->
+
+    <TableRow
+        android:id="@+id/tbOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--draw the view box and give it color-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:background="@color/orange" />
+    </TableRow>
+
+    <!--place the go back image from drawable and use margin top to adjust-->
+    <ImageView
+        android:id="@+id/imgGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/go_back"
+        android:src="@drawable/ic_go_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- place the phone image constraint the bottom to top of the second section, while setting the translation to come on top of it-->
+    <ImageView
+        android:id="@+id/imgBgImage"
+        android:layout_width="231dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="220dp"
+        android:contentDescription="@string/phone_image"
+        android:src="@drawable/phone"
+        android:translationZ="@dimen/cardview_default_elevation"
+        app:layout_constraintBottom_toTopOf="@id/tbTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tbOne" />
+
+
+    <!--draw the section section and constraint the top to bottom of the first section-->
+
+    <TableRow
+        android:id="@+id/tbTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tbThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbOne">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple" />
+    </TableRow>
+
+
+    <!--draw the jumbotron text and constraint the top to the top of the second section-->
+    <TextView
+        android:id="@+id/tvJumbotron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/jumbotron"
+        android:textColor="@color/jumbotron"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBgImage" />
+
+
+    <!-- draw the subheading text and constraint the top to the bottom of the jumbotron text-->
+    <TextView
+        android:id="@+id/tvSubheading"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="91dp"
+        android:text="@string/subheading"
+        android:textAlignment="center"
+        android:textColor="@color/subheading"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tbThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJumbotron" />
+
+    <TableRow
+        android:id="@+id/tbThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="202dp"
+            android:layout_height="match_parent"
+            android:background="@color/purple_btn"
+            android:padding="30dp"
+            android:text="@string/sign_in"
+            android:textAlignment="center"
+            android:textColor="@color/btn_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_btn"
+            android:padding="30dp"
+            android:text="@string/sign_up"
+            android:textAlignment="center"
+            android:textColor="@color/btn_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+
+    <!-- draw a table row section for the sign up and sign in  making its orientation horizontal so the sign in and sign up lay side
+     by side-->
+</androidx.constraintlayout.widget.ConstraintLayout>
